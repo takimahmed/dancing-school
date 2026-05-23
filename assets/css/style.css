@@ -603,11 +603,12 @@ section { padding-block: clamp(4rem, 9vw, 8rem); }
 }
 .style-card {
   position: relative;
-  aspect-ratio: 3/4;
+  /* aspect-ratio: 3/4; */
   border-radius: var(--radius-lg);
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.6s var(--ease-out);
+  height: 230px;
 }
 .style-card:hover { transform: translateY(-6px); }
 .style-card img {
