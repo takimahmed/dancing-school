@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Full weekly schedule at Easy Dance Frankfurt — Bachata, Salsa, Zouk, Kizomba classes Monday through Sunday with filters by style, level, and instructor." />
+<title>Schedule — Easy Dance Frankfurt</title>
+<meta property="og:title" content="Weekly Schedule · Easy Dance Frankfurt" /><meta property="og:description" content="Every class, every day. Color-coded by style." /><meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="top-bar"><div class="top-bar-inner"><div class="marquee"><span><span class="dot"></span> Stundenplan aktuell · Termin vor dem Kommen bestätigen</span><span><span class="dot"></span> Alle Zeiten MEZ</span></div><div class="top-bar-side"><a href="mailto:info@easy-dance.de">info@easy-dance.de</a><a href="tel:+491639641730">+49 163 964 1730</a></div></div></div>
+
+<header class="site-header"><div class="container nav-inner"><a href="index.html" class="brand">Easy<span class="accent">.</span>Dance</a><nav class="nav-menu"><a href="courses.html">Kurse</a><a href="styles.html">Stile</a><a href="schedule.html" class="current">Stundenplan</a><a href="pricing.html">Preise</a><a href="instructors.html">Trainer</a><a href="events.html">Events</a><a href="about.html">Über uns</a><a href="location.html">Standort</a></nav><div class="nav-cta"><div class="lang-toggle"><span>EN</span>/<span class="active">DE</span></div><a href="booking.html" class="btn btn-primary">Probestunde <span class="arrow">→</span></a><button class="menu-btn" id="menuBtn" aria-label="Menü öffnen"><span></span></button></div></div></header>
+
+<aside class="mobile-menu" id="mobileMenu"><button class="close" id="closeBtn" aria-label="Menü schließen">×</button><ul><li><a href="courses.html">Kurse</a></li><li><a href="styles.html">Stile</a></li><li><a href="schedule.html" style="color: var(--ember);">Stundenplan</a></li><li><a href="pricing.html">Preise</a></li><li><a href="instructors.html">Trainer</a></li><li><a href="events.html">Events</a></li><li><a href="about.html">Über uns</a></li><li><a href="location.html">Standort</a></li><li><a href="booking.html" style="color: var(--ember);">Probestunde →</a></li></ul></aside>
+
+<main>
+
+<section class="hero hero-compact">
+  <div class="hero-media"><img src="https://easy-dance.de/wp-content/uploads/2025/09/Tanzkreis-681x1024.jpg" alt="Studio in motion" /></div>
+  <div class="container hero-inner"><div>
+    <div class="crumbs"><a href="index.html">Start</a><span class="sep">/</span><span class="here">Schedule</span></div>
+    <span class="eyebrow" style="color: var(--gold-soft);">Diese Woche auf der Fläche</span>
+    <h1 style="margin-top: 1rem;">Sieben Tage,<br/>ein <em class="em">Studio</em>.</h1>
+    <p class="hero-sub">Unterricht Montag bis Sonntag — farblich nach Stil. Filter danach, was du tanzen willst, wann du kommen kannst, oder mit wem du tanzen willst.</p>
+    <div class="hero-cta"><a href="booking.html" class="btn btn-primary">Probestunde buchen <span class="arrow">→</span></a><a href="#download" class="btn btn-ghost" style="color: var(--cream);">Download as .ics</a></div>
+  </div></div>
+</section>
+
+<section class="schedule">
+  <div class="container">
+    <div class="filter-bar reveal">
+      <div class="filter-group" aria-label="Filter by style">
+        <span class="lbl">Stil</span>
+        <button class="filter-chip active" data-filter="all" data-target="style">Alle</button>
+        <button class="filter-chip" data-filter="bachata" data-target="style">Bachata</button>
+        <button class="filter-chip" data-filter="salsa" data-target="style">Salsa</button>
+        <button class="filter-chip" data-filter="zouk" data-target="style">Zouk</button>
+        <button class="filter-chip" data-filter="kizomba" data-target="style">Kizomba</button>
+      </div>
+      <div class="filter-divider" aria-hidden="true"></div>
+      <div class="filter-group" aria-label="Filter by level">
+        <span class="lbl">Niveau</span>
+        <button class="filter-chip active" data-filter="all" data-target="level">Alle</button>
+        <button class="filter-chip" data-filter="beg" data-target="level">Anfänger</button>
+        <button class="filter-chip" data-filter="int" data-target="level">Mittelstufe</button>
+        <button class="filter-chip" data-filter="adv" data-target="level">Fortgeschritten</button>
+      </div>
+      <div class="filter-divider" aria-hidden="true"></div>
+      <div class="filter-group" aria-label="Filter by instructor">
+        <span class="lbl">Trainer:in</span>
+        <button class="filter-chip active" data-filter="all" data-target="instructor">Alle</button>
+        <button class="filter-chip" data-filter="eduardo" data-target="instructor">Eduardo</button>
+        <button class="filter-chip" data-filter="natalia" data-target="instructor">Natalia</button>
+        <button class="filter-chip" data-filter="marco" data-target="instructor">Marco</button>
+      </div>
+    </div>
+
+    <div class="legend reveal">
+      <span class="dot bachata">Bachata</span>
+      <span class="dot salsa">Salsa</span>
+      <span class="dot zouk">Zouk</span>
+      <span class="dot kizomba">Kizomba</span>
+      <span class="dot beg">Anfänger</span>
+      <span class="dot int">Mittelstufe</span>
+      <span class="dot adv">Fortgeschritten</span>
+    </div>
+
+    <div class="weekgrid reveal">
+
+      <div class="day-col">
+        <h4>Montag</h4>
+        <div class="cls bachata beg" data-style="bachata" data-level="beg" data-instructor="eduardo"><span class="t">18:00</span><span class="n">Bachata Foundations</span><span class="lvl">Anfänger · Eduardo</span></div>
+        <div class="cls salsa int" data-style="salsa" data-level="int" data-instructor="marco"><span class="t">19:15</span><span class="n">Salsa Cubana — Rueda</span><span class="lvl">Mittelstufe · Marco</span></div>
+        <div class="cls bachata int" data-style="bachata" data-level="int" data-instructor="natalia"><span class="t">20:30</span><span class="n">Bachata Sensual — Body Movement</span><span class="lvl">Mittelstufe · Natalia</span></div>
+        <div class="cls social" data-style="bachata salsa zouk kizomba" data-level="beg int adv" data-instructor="eduardo natalia marco"><span class="t">21:45</span><span class="n">Open Practice >Open Practice &amp; Q&amp;A<amp; Q&amp;A</span><span class="lvl">Alle · Mitglieder</span></div>
+        <div class="cls zouk adv" data-style="zouk" data-level="adv" data-instructor="natalia"><span class="t">22:30</span><span class="n">Zouk Foundations (Late)</span><span class="lvl">Fortgeschritten · Natalia</span></div>
+      </div>
+
+      <div class="day-col">
+        <h4>Dienstag</h4>
+        <div class="cls salsa beg" data-style="salsa" data-level="beg" data-instructor="marco"><span class="t">18:30</span><span class="n">Salsa Cubana — First Steps</span><span class="lvl">Anfänger · Marco</span></div>
+        <div class="cls bachata int" data-style="bachata" data-level="int" data-instructor="eduardo"><span class="t">19:45</span><span class="n">Bachata Dominicana</span><span class="lvl">Mittelstufe · Eduardo</span></div>
+        <div class="cls social" data-style="bachata salsa zouk kizomba" data-level="int adv" data-instructor="eduardo natalia marco"><span class="t">21:00</span><span class="n">Mitglieder-Übung (Di)</span><span class="lvl">Nur Mitglieder</span></div>
+      </div>
+
+      <div class="day-col">
+        <h4>Mittwoch</h4>
+        <div class="cls zouk beg" data-style="zouk" data-level="beg" data-instructor="natalia"><span class="t">18:00</span><span class="n">Zouk — Lyrical Foundations</span><span class="lvl">Anfänger · Natalia</span></div>
+        <div class="cls salsa int" data-style="salsa" data-level="int" data-instructor="marco"><span class="t">19:30</span><span class="n">Salsa L.A. — Linear Drive</span><span class="lvl">Mittelstufe · Marco</span></div>
+        <div class="cls salsa adv" data-style="salsa" data-level="adv" data-instructor="marco"><span class="t">20:45</span><span class="n">Salsa Advanced — On-2 Lab</span><span class="lvl">Fortgeschritten · Guest</span></div>
+        <div class="cls bachata beg" data-style="bachata" data-level="beg" data-instructor="eduardo"><span class="t">21:30</span><span class="n">Kostenlose Probestunde (Mi)</span><span class="lvl">Anfänger · Eduardo</span></div>
+      </div>
+
+      <div class="day-col">
+        <h4>Donnerstag</h4>
+        <div class="cls kizomba beg" data-style="kizomba" data-level="beg" data-instructor="marco"><span class="t">18:30</span><span class="n">Kizomba — Slow &amp; Grounded</span><span class="lvl">Anfänger · Marco</span></div>
+        <div class="cls bachata int" data-style="bachata" data-level="int" data-instructor="natalia"><span class="t">19:30</span><span class="n">Bachata Sensual Make-up</span><span class="lvl">Mittelstufe · Natalia</span></div>
+        <div class="cls kizomba int" data-style="kizomba" data-level="int" data-instructor="marco"><span class="t">19:45</span><span class="n">Tarraxinha Lab</span><span class="lvl">Mittelstufe · Marco</span></div>
+        <div class="cls bachata adv" data-style="bachata" data-level="adv" data-instructor="eduardo natalia"><span class="t">21:00</span><span class="n">Bachata Moderna — Advanced</span><span class="lvl">Fortgeschritten · Edu &amp; Natalia</span></div>
+      </div>
+
+      <div class="day-col">
+        <h4>Freitag</h4>
+        <div class="cls kizomba int" data-style="kizomba" data-level="int" data-instructor="marco"><span class="t">19:00</span><span class="n">Urban Kiz — Sharp &amp; Modern</span><span class="lvl">Mittelstufe · Marco</span></div>
+        <div class="cls social" data-style="bachata salsa zouk kizomba" data-level="beg int adv" data-instructor="eduardo natalia marco"><span class="t">21:00</span><span class="n">Friday Social — DJ Set</span><span class="lvl">Alle · DJ Marco</span></div>
+      </div>
+
+      <div class="day-col">
+        <h4>Samstag</h4>
+        <div class="cls salsa beg" data-style="salsa" data-level="beg" data-instructor="marco"><span class="t">14:00</span><span class="n">Salsa Open Practice</span><span class="lvl">Alle · Mitglieder</span></div>
+        <div class="cls bachata int" data-style="bachata" data-level="int" data-instructor="eduardo"><span class="t">14:00</span><span class="n">Musicality Lab</span><span class="lvl">Mittelstufe · Eduardo</span></div>
+        <div class="cls zouk beg" data-style="zouk" data-level="beg" data-instructor="natalia"><span class="t">15:30</span><span class="n">Zouk Open Practice</span><span class="lvl">Alle · Mitglieder</span></div>
+      </div>
+
+      <div class="day-col">
+        <h4>Sonntag</h4>
+        <div class="cls bachata beg" data-style="bachata" data-level="beg" data-instructor="eduardo"><span class="t">11:00</span><span class="n">Sonntag Slow Bachata</span><span class="lvl">Anfänger · Eduardo</span></div>
+        <div class="cls social" data-style="bachata salsa zouk kizomba" data-level="beg" data-instructor="eduardo natalia marco"><span class="t">13:00</span><span class="n">Brunch >Brunch &amp; Free Dance<amp; Free Dance</span><span class="lvl">Mitglieder-Brunch</span></div>
+      </div>
+
+    </div>
+
+    <div id="download" style="margin-top: 3rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+      <p style="color: var(--mute); font-size: 0.9rem;">Stundenplan wechselt saisonal. Vor dem Kommen per WhatsApp bestätigen.</p>
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <a href="#" class="btn btn-dark">Als .ics-Kalender <span class="arrow">↓</span></a>
+        <a href="#" class="btn btn-ghost">Als PDF <span class="arrow">↓</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container cta-inner">
+    <div class="reveal"><span class="eyebrow" style="color: var(--cream); opacity: 0.7;">Erst testen, dann entscheiden</span><h2 style="margin-top: 1.25rem;">Erste Stunde<br/>geht <em>auf uns</em>.</h2><p>Wähl eine beliebige Stunde im Raster. Buch eine Probestunde — komm vorbei, tanz, entscheide. Keine Kreditkarte nötig.</p></div>
+    <div class="reveal" style="display: flex; flex-direction: column; gap: 1rem;"><a href="booking.html" class="btn btn-dark" style="background: var(--ink); justify-content: center;">Probestunde buchen <span class="arrow">→</span></a><a href="https://wa.me/491639641730" class="btn btn-ghost" style="color: var(--cream); border-color: var(--cream); justify-content: center;">Marco hilft bei der Auswahl</a></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-top">
+  <div class="footer-brand"><a href="index.html" class="brand">Easy<span class="accent">.</span>Dance</a><p>Ein Latin-Tanzstudio in Frankfurt am Main.</p></div>
+  <div class="footer-col"><h5>Studio</h5><ul><li><a href="courses.html">Kurse</a></li><li><a href="schedule.html">Stundenplan</a></li><li><a href="pricing.html">Preise</a></li><li><a href="instructors.html">Trainer</a></li></ul></div>
+  <div class="footer-col"><h5>Besuchen</h5><ul><li><a href="location.html">Standort</a></li><li><a href="booking.html">Probestunde</a></li><li><a href="wedding-dance.html">Hochzeitstanz</a></li><li><a href="contact.html">Kontakt</a></li></ul></div>
+  <div class="footer-col"><h5>Kontakt</h5><ul><li><a href="mailto:info@easy-dance.de">info@easy-dance.de</a></li><li><a href="tel:+491639641730">+49 163 964 1730</a></li><li><a href="https://wa.me/491639641730">WhatsApp</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+</div><div class="footer-display">Easy <em>Dance.</em></div><div class="footer-bottom"><div>© 2025 Easy Dance Frankfurt.</div><div class="links"><a href="privacy.html">Datenschutz</a><a href="imprint.html">Impressum</a></div></div></div></footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
