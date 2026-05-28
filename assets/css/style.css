@@ -16,6 +16,8 @@ ul, ol { list-style: none; }
   --wine: #3B1018;
   --ember: #D85230;
   --ember-soft: #E27554;
+  /* --ember: #fbeb3b;
+  --ember-soft: #e8d831; */
   --gold: #C19854;
   --gold-soft: #D9B777;
   --mute: #7A6C5F;
@@ -2853,3 +2855,6 @@ table.compare-table {
 .slot-day .slot.full:hover { background: transparent; color: var(--mute); }
 @media (max-width: 900px) { .slot-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 520px) { .slot-grid { grid-template-columns: repeat(2, 1fr); } }
+.site-logo{
+  width: 120px;
+}
