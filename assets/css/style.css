@@ -1432,21 +1432,22 @@ section { padding-block: clamp(4rem, 9vw, 8rem); }
 
 /* ========== FOOTER ========== */
 .site-footer {
-  background: var(--ink);
-  color: var(--cream);
+  background: var(--paper);
+  color: var(--espresso);
   padding-block: 5rem 2rem;
+  border-top: 1px solid var(--line);
 }
 .footer-top {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 3rem;
   padding-bottom: 4rem;
-  border-bottom: 1px solid var(--line-light);
+  border-bottom: 1px solid var(--line);
 }
-.footer-brand .brand { color: var(--cream); }
+.footer-brand .brand { color: var(--ink); }
 .footer-brand .brand .accent { color: var(--ember); }
 .footer-brand p {
-  color: rgba(242,234,219,0.65);
+  color: var(--mute);
   margin-top: 1.25rem;
   max-width: 36ch;
   font-size: 0.95rem;
@@ -1459,13 +1460,14 @@ section { padding-block: clamp(4rem, 9vw, 8rem); }
 .socials a {
   width: 40px; height: 40px;
   border-radius: 50%;
-  border: 1px solid rgba(242,234,219,0.25);
+  border: 1px solid var(--line);
+  color: var(--espresso);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
 }
-.socials a:hover { background: var(--ember); border-color: var(--ember); transform: translateY(-2px); }
+.socials a:hover { background: var(--ember); border-color: var(--ember); color: var(--paper); transform: translateY(-2px); }
 .socials svg { width: 16px; height: 16px; }
 
 .footer-col h5 {
@@ -1473,17 +1475,17 @@ section { padding-block: clamp(4rem, 9vw, 8rem); }
   font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold-soft);
+  color: var(--gold);
   margin-bottom: 1.5rem;
   font-weight: 600;
 }
 .footer-col ul { display: flex; flex-direction: column; gap: 0.75rem; }
 .footer-col a {
   font-size: 0.92rem;
-  color: rgba(242,234,219,0.7);
+  color: var(--mute);
   transition: color 0.3s ease, padding-left 0.3s ease;
 }
-.footer-col a:hover { color: var(--ember-soft); padding-left: 6px; }
+.footer-col a:hover { color: var(--ember); padding-left: 6px; }
 
 .footer-bottom {
   display: flex;
@@ -1491,12 +1493,12 @@ section { padding-block: clamp(4rem, 9vw, 8rem); }
   align-items: center;
   padding-top: 2rem;
   font-size: 0.82rem;
-  color: rgba(242,234,219,0.5);
+  color: var(--mute);
   flex-wrap: wrap;
   gap: 1rem;
 }
 .footer-bottom .links { display: flex; gap: 1.5rem; }
-.footer-bottom a:hover { color: var(--ember-soft); }
+.footer-bottom a:hover { color: var(--ember); }
 
 .footer-display {
   font-family: var(--font-display);
@@ -1506,7 +1508,7 @@ section { padding-block: clamp(4rem, 9vw, 8rem); }
   letter-spacing: -0.04em;
   line-height: 0.9;
   color: var(--ember);
-  opacity: 0.15;
+  opacity: 0.14;
   text-align: center;
   padding-block: 2rem;
   font-variation-settings: "opsz" 144, "SOFT" 100;
@@ -2858,3 +2860,212 @@ table.compare-table {
 .site-logo{
   width: 120px;
 }
+
+/* ========================================================================
+   EASY-DANCE AUGSBURG — NAV DROPDOWNS, CALL BUTTON, HERO POINTS, REVIEWS
+   ======================================================================== */
+
+/* Logo sizing in header + footer */
+.site-logo { width: 120px; height: auto; }
+.footer-brand .brand .site-logo { width: 150px; }
+
+/* --- Desktop dropdown nav --- */
+.nav-menu { gap: 1.6rem; }
+.nav-menu .nav-item { position: relative; }
+.nav-menu .nav-item > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding-block: 0.6rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+.nav-menu .nav-item > a .caret {
+  font-size: 0.6rem;
+  transition: transform 0.3s ease;
+  opacity: 0.6;
+}
+.nav-menu .nav-item:hover > a .caret { transform: rotate(180deg); }
+.nav-submenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.55rem;
+  min-width: 250px;
+  box-shadow: 0 24px 60px rgba(26, 15, 10, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+  z-index: 130;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.nav-menu .nav-item:hover .nav-submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(4px);
+}
+.nav-submenu a {
+  white-space: nowrap;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--espresso);
+  padding: 0.55rem 0.8rem;
+  border-radius: 9px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.nav-submenu a::after { display: none; }
+.nav-submenu a:hover { background: var(--cream); color: var(--ember); }
+
+/* --- Direct call button (stays visible on mobile) --- */
+.btn-call {
+  gap: 0.5rem;
+  padding-inline: 1.4rem;
+}
+.btn-call svg { width: 17px; height: 17px; }
+@media (max-width: 640px) {
+  .nav-cta .btn-call { display: inline-flex; padding: 0.8rem 1rem; font-size: 0.8rem; }
+}
+@media (max-width: 560px) {
+  .btn-call .call-label { display: none; }
+  .btn-call { padding-inline: 0.85rem; }
+  .site-logo { width: 96px; }
+  .nav-inner { gap: 0.75rem; }
+  .nav-cta { gap: 0.5rem; flex-shrink: 0; }
+  .brand { flex-shrink: 0; }
+  .menu-btn { width: 40px; }
+}
+@media (max-width: 400px) {
+  .site-logo { width: 84px; }
+  .btn-call { padding: 0.7rem 0.8rem; }
+}
+
+/* --- Mobile menu submenus (accordion) --- */
+.mobile-menu ul { gap: 0.4rem; }
+.mobile-menu details { border-bottom: 1px solid var(--line-light); padding-bottom: 0.4rem; }
+.mobile-menu summary {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--cream);
+  list-style: none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobile-menu summary::-webkit-details-marker { display: none; }
+.mobile-menu summary::after { content: "+"; color: var(--ember); font-family: var(--font-body); font-size: 1.6rem; }
+.mobile-menu details[open] summary::after { content: "–"; }
+.mobile-menu .m-sub { display: flex; flex-direction: column; gap: 0.55rem; padding: 0.5rem 0 0.8rem 0.6rem; }
+.mobile-menu .m-sub a {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: rgba(242, 234, 219, 0.78);
+}
+.mobile-menu .m-sub a:hover { color: var(--ember); }
+.mobile-menu .m-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: var(--ember);
+  padding: 0.95rem 1.4rem;
+  border-radius: 999px;
+  align-self: flex-start;
+}
+.mobile-menu .m-call svg { width: 18px; height: 18px; }
+
+/* --- Hero bullet points with star icons --- */
+.hero-points {
+  list-style: none;
+  margin-top: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.hero-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 1rem;
+  line-height: 1.45;
+  color: rgba(242, 234, 219, 0.92);
+}
+.hero-points svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  color: var(--gold-soft);
+}
+
+/* --- Google reviews / map embed --- */
+.gmap-embed {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  min-height: 380px;
+  background: var(--cream-soft);
+}
+.gmap-embed iframe { width: 100%; height: 100%; min-height: 380px; border: 0; display: block; }
+.google-review-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.google-review-cta .g-logo { font-weight: 700; letter-spacing: 0.02em; }
+
+/* ========================================================================
+   HOMEPAGE — strict paper/cream section alternation (client request)
+   Odd sections → paper (#FBF6EC), even → cream (#F2EADB). No two adjacent
+   share a colour. The cta-section directly above the footer is kept as the
+   ember accent; previously-dark sections are recoloured for a light bg.
+   ======================================================================== */
+.home > section:nth-of-type(odd)  { background: var(--paper); }
+.home > section:nth-of-type(even) { background: var(--cream); }
+
+/* hero keeps its original (image) treatment — never a flat fill.
+   It still counts in nth-of-type so the rest of the sequence is unchanged. */
+.home > section.hero { background: transparent; }
+
+/* keep the call-to-action band above the footer as the accent */
+.home > section.cta-section { background: var(--ember); }
+
+/* decorative scrolling band → light, to stay within the 2-colour palette */
+.home > .marquee-band {
+  background: var(--paper);
+  color: var(--espresso);
+  border-block-color: var(--line);
+}
+.home > .marquee-band .marquee-track span { color: var(--espresso); }
+
+/* "Die Methode" now sits on a light background → dark text */
+.home > section.methodology { color: var(--espresso); }
+.home > section.methodology .eyebrow { color: var(--gold); }
+.home > section.methodology h2,
+.home > section.methodology h3,
+.home > section.methodology h4 { color: var(--ink); }
+.home > section.methodology p,
+.home > section.methodology .lead { color: var(--mute); }
+
+/* pull-quote now on a light background → dark text */
+.home > section.quote-section { color: var(--espresso); }
+.home > section.quote-section blockquote { color: var(--ink); }
+.home > section.quote-section cite { color: var(--mute); }
